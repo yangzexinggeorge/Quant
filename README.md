@@ -1,30 +1,43 @@
 # Quant
 
-# A-share Factor Sorting & CNN Stock Image Classifier
+## 📈 A-share Factor Sorting & 📊 CNN Stock Image Classifier
 
-**Language Notice:** All in-file comments are written in Chinese to preserve the original research context. English section headers have been added for clarity and accessibility.
+> **Disclaimer:** Only partial source code is provided in this repository due to data licensing and confidentiality restrictions. The uploaded modules highlight the core logic and structure of the original research.
 
-## Project Overview
+---
 
-This repository showcases two independent machine learning projects combining financial modeling and deep learning:
+## 🧠 Project Overview
 
-1. **FactorSort/** – Python pipeline for cross-sectional factor analysis on the Chinese A-share market  
-   • Implements winsorization, decile sorting, and Newey-West adjusted t-statistics  
-   • Outputs cumulative return plots and factor group descriptors  
+This repository presents two standalone machine learning pipelines combining **quantitative finance** and **deep learning**:
 
-2. **CNN_Classifier/** – PyTorch pipeline for classifying stock candlestick chart images  
-   • Contains core training script (`train.py`) demonstrating model architecture and training logic  
-   • Achieves ~57% directional accuracy (3-class: down, flat, up) compared to 50% baseline  
-   • Additional modules such as `DataLoader` and metrics logger will be uploaded soon  
+### 1. `FactorSort/`: Cross-Sectional Factor Analysis on China A-Shares
+- Partial code for a Python pipeline analyzing equity alpha factors
+- Implements:
+  - Winsorization, z-scoring, decile sorting
+  - Newey-West t-statistics for significance testing
+- Outputs (in full version):
+  - Cumulative returns
+  - Factor performance reports
+- 🔒 **Note:** Proprietary datasets and backtest results not included
 
-## Quick Start (Sample Only)
+### 2. `CNN_Classifier/`: Stock Chart Image Classification with PyTorch
+- Selected core scripts demonstrating:
+  - CNN model architecture and training pipeline (`train.py`)
+  - Modularized training config and evaluation logic
+- Achieves ~57% accuracy on 3-class directional prediction (`down`, `flat`, `up`)
+- 🔜 Additional modules (e.g., `DataLoader`, logger) to be uploaded incrementally
+- 🔒 **Note:** Image datasets and model checkpoints withheld due to confidentiality
+
+---
+
+## 🚀 Quick Start (Sample Only)
 
 ```bash
-# Install dependencies
+# Install required packages
 pip install -r requirements.txt
 
-# Run A-share factor analysis
+# Run partial factor analysis pipeline
 python FactorSort/main.py
 
-# Train CNN model on chart images
+# Train CNN on candlestick images (with your own data)
 python CNN_Classifier/train.py --epochs 20
